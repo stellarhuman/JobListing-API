@@ -1,0 +1,42 @@
+#### Setup
+
+```bash
+npm install && npm start
+```
+
+#### Database Connection
+
+1. Import connect.js
+2. Invoke in start()
+3. Setup .env in the root
+4. Add MONGO_URI with correct value
+
+#### Routers
+
+- auth.js
+- jobs.js
+
+
+#### Login User
+
+- Validate - email, password - in controller
+- If email or password is missing, throw BadRequestError
+- Find User
+- Compare Passwords
+- If no user or password does not match, throw UnauthenticatedError
+- If correct, generate Token
+- Send Response with Token
+
+#### Mongoose Errors
+
+- Validation Errors
+- Duplicate (Email)
+- Cast Error
+
+#### Security
+
+- helmet
+- cors
+- xss-clean
+- express-rate-limit
+
